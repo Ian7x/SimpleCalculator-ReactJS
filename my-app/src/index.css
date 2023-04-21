@@ -1,0 +1,100 @@
+:root {
+  --primary: #1e81d8;
+  --secondary: #8c38ff;
+  --dark: #131a26;
+  --light: #eee;
+  --lightblue: rgb(47, 255, 255);
+  --gradient: rgb(0, 81, 255), rgb(0, 128, 128), rgb(79, 0, 128);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  background-color: rgb(95, 93, 93);
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 100%;
+  height: 420px;
+  max-width: 500px;
+  background-color: var(--dark);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  padding: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--lightblue);
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.display span {
+  font-size: 12px;
+  color: var(--lightblue);
+}
+
+.operators {
+  display: flex;
+}
+
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 16px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operators button {
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  background-image: linear-gradient(
+    rgb(0, 162, 255),
+    rgb(0, 128, 128),
+    rgb(126, 0, 128)
+  );
+  border: 1px solid black;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.del {
+  font-size: 34px;
+}
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+  color: var(--lightblue);
+  font-size: 24px;
+}
